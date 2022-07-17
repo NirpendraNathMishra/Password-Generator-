@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>Password generator</title>
+</head>
+
+<body>
+    <div class="caption">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="caption">
+                        <div class="container">
+                            <h1>
+                                GET A NEW
+                                <br> PASSWORD
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 box">
+                                <label class="container2">
+                                    <input type="checkbox" id="numbers" checked="checked">
+                                    <span class="checkmark"></span>
+                                    <h4>Numbers</h4>
+                                    <p>Contains numbers : 1 2 ... 9 0</p>
+                                </label>
+                            </div>
+                            <div class="col-sm-6 box">
+                                <label class="container2">
+                                    <input type="checkbox" id="symbols" checked="checked">
+                                    <span class="checkmark"></span>
+                                    <h4>Symbols</h4>
+                                    <p>Contains symbols : ! ? # $ % & * + - =</p>
+                                </label>
+                            </div>
+                            <div class=" col-sm-6 box">
+                                <label class="container2">
+                                    <input type="checkbox" id="lowercases" checked="checked">
+                                    <span class="checkmark"></span>
+                                    <h4 style="text-transform: lowercase">lowercase letters</h4>
+                                    <p style="text-transform: lowercase">contains lowercase letters : a b ... y z</p>
+                                </label>
+                            </div>
+                            <div class="col-sm-6 box">
+                                <label class="container2">
+                                    <input type="checkbox" id="uppercases" checked="checked">
+                                    <span class="checkmark"></span>
+                                    <h4 style="text-transform: uppercase">Uppercase letters</h4>
+                                    <p style="text-transform: uppercase">Contains uppercase letters : A B ... Y Z</p>
+                                </label>
+                            </div>
+                            <div class="col-sm-6 box">
+                                <label class="container2">
+                                    <input type="checkbox" id="similars" checked="checked">
+                                    <span class="checkmark"></span>
+                                    <h4>Remove similar characters</h4>
+                                    <p>No ambiguous characters : 1 l I ! 0 O Q 8 B</p>
+                                </label>
+                            </div>
+                            <div class="col-sm-5 box">
+                                <label class="container2">
+                                    <input type="number" id="password-length"  min="8" max="60" value="12">
+                                    <h4>Length</h4>
+                                    <p>Indicate the desired length : max is 60 </p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-lg-9">
+                                <input class="result" id="password-1">
+                            </div>
+                            <div class=" col-lg-3">
+                                <button id="submit-btn">Generate</button>
+                                <button id="copy" class="blue-btn" style="display:none " onclick="copyPassword('password-1')">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-4 lock">
+                    <div class="caption">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
